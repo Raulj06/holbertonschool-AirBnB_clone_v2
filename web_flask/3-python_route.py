@@ -21,16 +21,14 @@ def hbnb_route():
 @app.route('/c/<text>', strict_slashes=False)
 def c_route(text):
     """ Displays message on /c/ route """
-    text = text.replace('_', " ")
-    return 'C {}'.format(text)
+    return "C " + text.replace("_", " "))
 
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_route(text="is cool"):
     """ Display message on /python/ route"""
-    text = text.replace('_', " ")
-    return 'Python {}'.format(text)
+    return 'Python {}'.format(text.replace("_", " "))
 
 
 if __name__ == '__main__':
